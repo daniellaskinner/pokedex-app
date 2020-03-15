@@ -10,7 +10,8 @@ $pokemonsArray = $pokemonHydrator->getPokemonEntities();
 
 foreach($pokemonsArray as $pokemon) {
     $pokemonEntity = new PokemonEntity();
-    echo $pokemonEntity->displayPokemon($pokemon);
+    $pokemonEntity = $pokemon;
+    echo $pokemonEntity->displayPokemon();
 }
 
 ?>

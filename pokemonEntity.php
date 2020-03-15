@@ -5,13 +5,12 @@ class PokemonEntity {
     public $name;
     public $type_1;
     public $type_2;
-    public $image_url;
 
-    public function displayPokemon($pokemonFromDB) {
-        if($pokemonFromDB->type_2==NULL) {
-            return "<div> $pokemonFromDB->id $pokemonFromDB->name <br> Type 1:$pokemonFromDB->type_1 <br> <br> <img src='$pokemonFromDB->image_url'> <br> </div>";
+    public function displayPokemon() {
+        if($this->type_2==NULL) {
+            return "<div> $this->id $this->name <br> Type 1:$this->type_1 <br> <br> <img src='https://pokeres.bastionbot.org/images/pokemon/$this->id.png'/> <br> </div>";
         } else {
-            return "<div> $pokemonFromDB->id $pokemonFromDB->name <br> Type 1:$pokemonFromDB->type_1 <br> Type 2:$pokemonFromDB->type_2  <br> <br> <img src='$pokemonFromDB->image_url'> <br> </div>";
+            return "<div> $this->id $this->name <br> Type 1:$this->type_1 <br> Type 2:$this->type_2  <br> <br> <img src='https://pokeres.bastionbot.org/images/pokemon/$this->id.png'/> <br> </div>";
         }
     }
 }
